@@ -1,8 +1,10 @@
 Sub Body()
 Attribute Body.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Body"
 '
-' Body Macro
+' Body macro to format main body text into 
+' IEEE two column report spec for keywords.
 '
+' Authors: David Suh
 '
     Selection.Font.Name = "Times New Roman"
     Selection.Font.Size = 10
