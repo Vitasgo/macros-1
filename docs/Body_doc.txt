@@ -1,0 +1,24 @@
+The body macros will format the main body text into the IEEE two column standard.
+
+The attributes of the IEEE two column body features:
+Font: 
+Times New Roman
+
+Columns: 
+Two 3.5” columns with 0.25” spacing
+
+Margins:
+.75”, 1”
+.63”, 63”
+
+References > Bib:
+Chicago
+
+
+Paragraph spacing:
+custom paragraph spacing, alignment Left.
+
+Text alignment:
+"Justify"
+
+To initiate the macro, simply highlight the body text, then under tools, choose macros, and run Body.
