@@ -6,16 +6,21 @@ Attribute Body.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Body"
 '
 ' Authors: David Suh
 '
+'   Setting Font name and size to TNR and 10
+
     Selection.Font.Name = "Times New Roman"
     Selection.Font.Size = 10
     If ActiveWindow.View.SplitSpecial <> wdPaneNone Then
         ActiveWindow.Panes(2).Close
     End If
+'   Window View is normal
     If ActiveWindow.ActivePane.View.Type = wdNormalView Or ActiveWindow. _
         ActivePane.View.Type = wdOutlineView Or ActiveWindow.ActivePane.View.Type _
          = wdMasterView Then
         ActiveWindow.ActivePane.View.Type = wdPageView
     End If
+
+' Creating two column space 
     With ActiveDocument.PageSetup.TextColumns
         .SetCount NumColumns:=2
         .EvenlySpaced = True
