@@ -1,9 +1,9 @@
 Sub Body()
 Attribute Body.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Body"
 '
-' Body Macro
-'
-'
+' This is the Body macro to format main body text into 
+' IEEE two column report spec.
+
     Selection.Font.Name = "Times New Roman"
     Selection.Font.Size = 10
     If ActiveWindow.View.SplitSpecial <> wdPaneNone Then
