@@ -2,7 +2,7 @@ Sub Body()
 Attribute Body.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Body"
 '
 ' Body macro to format main body text into 
-' IEEE two column report spec for keywords.
+' IEEE two column report spec.
 '
 ' Authors: David Suh
 '
