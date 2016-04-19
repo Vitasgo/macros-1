@@ -7,17 +7,6 @@ Attribute Body.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Body"
 ' Authors: David Suh
 '
     Selection.Font.Name = "Times New Roman"
-    Selection.Font.Size = 10
-'   Specifying the Window View
-    If ActiveWindow.View.SplitSpecial <> wdPaneNone Then
-        ActiveWindow.Panes(2).Close
-    End If
-    If ActiveWindow.ActivePane.View.Type = wdNormalView Or ActiveWindow. _
-        ActivePane.View.Type = wdOutlineView Or ActiveWindow.ActivePane.View.Type _
-         = wdMasterView Then
-        ActiveWindow.ActivePane.View.Type = wdPageView
-    End If
-    
 '   Creating Two Columns
     With ActiveDocument.PageSetup.TextColumns
         .SetCount NumColumns:= 2
@@ -25,5 +14,33 @@ Attribute Body.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.Body"
         .LineBetween = False
         .Width = InchesToPoints(3.5)
         .Spacing = InchesToPoints(0.25)
+    End With
+    
+    With ActiveDocument.PageSetup
+        .LineNumbering.Active = False
+        .Orientation = wdOrientPortrait
+        .TopMargin = InchesToPoints(0.75)
+        .BottomMargin = InchesToPoints(0.75)
+        .LeftMargin = InchesToPoints(0.63)
+        .RightMargin = InchesToPoints(0.63)
+        .Gutter = InchesToPoints(0)
+        .HeaderDistance = InchesToPoints(0.5)
+        .FooterDistance = InchesToPoints(0.5)
+        .PageWidth = InchesToPoints(8.5)
+        .PageHeight = InchesToPoints(11)
+        .FirstPageTray = wdPrinterDefaultBin
+        .OtherPagesTray = wdPrinterDefaultBin
+        .SectionStart = wdSectionNewPage
+        .OddAndEvenPagesHeaderFooter = False
+        .DifferentFirstPageHeaderFooter = False
+        .VerticalAlignment = wdAlignVerticalTop
+        .SuppressEndnotes = False
+        .MirrorMargins = False
+        .TwoPagesOnOne = False
+        .BookFoldPrinting = False
+        .BookFoldRevPrinting = False
+        .BookFoldPrintingSheets = 1
+        .GutterPos = wdGutterPosLeft
+        .LayoutMode = wdLayoutModeDefault
     End With
 End Sub
